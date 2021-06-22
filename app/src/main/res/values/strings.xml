@@ -17,25 +17,25 @@
     <string name="score">Pontuação:</string>
     <string name="prevision">Previsão:</string>
     <string-array name="specifications">
-        <item> </item>
-        <item> Idade superior a 80 anos </item>
-        <item> Índio </item>
-        <item> Profissionais Saúde - Atende Covid </item>
-        <item> Profissionais da Saúde - Geral </item>
-        <item> Idade superior a 70 anos </item>
-        <item> Idade superior a 60 anos </item>
-        <item> Com Comorbidade Comprovada </item>
-        <item> Profissionais Segurança </item>
-        <item> Profissionais Área Educação </item>
-        <item> Motoristas Transporte Coletivo </item>
-        <item> Motoristas Caminhão </item>
-        <item> Profissional Atendimento ao Público </item>
-        <item> Idade superior a 50 anos </item>
-        <item> Grávida </item>
-        <item> Idade superior a 40 anos </item>
-        <item> Presidiário </item>
-        <item> Idade superior a 30 anos </item>
-        <item> Idade superior a 25 anos </item>
-        <item> Idade superior a 18 anos </item>
+        <item></item>
+        <item>Idade superior a 80 anos</item>
+        <item>Índio</item>
+        <item>Profissionais Saúde - Atende Covid</item>
+        <item>Profissionais da Saúde - Geral</item>
+        <item>Idade superior a 70 anos</item>
+        <item>Idade superior a 60 anos</item>
+        <item>Com Comorbidade Comprovada</item>
+        <item>Profissionais Segurança</item>
+        <item>Profissionais Área Educação</item>
+        <item>Motoristas Transporte Coletivo</item>
+        <item>Motoristas Caminhão</item>
+        <item>Profissional Atendimento ao Público</item>
+        <item>Idade superior a 50 anos</item>
+        <item>Grávida</item>
+        <item>Idade superior a 40 anos</item>
+        <item>Presidiário</item>
+        <item>Idade superior a 30 anos</item>
+        <item>Idade superior a 25 anos</item>
+        <item>Idade superior a 18 anos</item>
     </string-array>
 </resources>
