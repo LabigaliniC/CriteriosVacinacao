@@ -1,21 +1,14 @@
 <resources>
     <string name="app_name">CriteriosVacinacao</string>
+    <string name="second_activity_name">Second Activity</string>
     <string name="main_title">Novo Paciente</string>
     <string name="name">Nome</string>
     <string name="age">Idade</string>
     <string name="previsao">Previsão Vacina</string>
-    <string name="litiasis">Litíase biliar</string>
-    <string name="leucocites">Leucócitos</string>
-    <string name="glicemia">Glicemia</string>
-    <string name="ast_tgo">AST/TGO</string>
-    <string name="ldh">LDH</string>
-    <string name="c_l_mm3">cél./mm3</string>
-    <string name="mmol_l">mmol/L</string>
-    <string name="ui_l">UI/L</string>
-    <string name="title">Critérios de Ranson</string>
+    <string name="title">Calendário Vacinção</string>
     <string name="email">E-mail:</string>
     <string name="score">Pontuação:</string>
-    <string name="prevision">Previsão:</string>
+    <string name="prevision">Previsão</string>
     <string-array name="specifications">
         <item></item>
         <item>Idade superior a 80 anos</item>

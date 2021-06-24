@@ -12,20 +12,17 @@ public class InformationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_information);
 
-        TextView showNameLabel = findViewById(R.id.show_name);
-        //TextView age_Value = findViewById(R.id.age_value);
+        TextView showName = findViewById(R.id.show_name);
         TextView email_Value = findViewById(R.id.email_value);
-        TextView statusTextView = findViewById(R.id.prevision_value);
+        TextView previsionValue = findViewById(R.id.prevision_value);
 
         Intent intent = getIntent();
-        int name = intent.getIntExtra(MainActivity.EXTRA_NAME, 0);
-        int email = intent.getIntExtra(MainActivity.EXTRA_EMAIL, 0);
-        int priority = intent.getIntExtra(MainActivity.EXTRA_PRIORITY, 0);
+        String name = intent.getStringExtra(MainActivity.EXTRA_NAME);
+        String email = intent.getStringExtra(MainActivity.EXTRA_EMAIL);
+        String priority = intent.getStringExtra(MainActivity.EXTRA_PRIORITY);
 
-
-        showNameLabel.setText(Integer.toString(name));
-        email_Value.setText(Integer.toString(email));
-        statusTextView.setText(Integer.toString(priority));
-
+        showName.setText(name);
+        email_Value.setText(email);
+        previsionValue.setText(priority);
     }
 }

@@ -20,10 +20,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private Spinner spinnerLista;
 
     private EditText nameEditText;
-    private EditText ageEditText;
     private EditText emailEditText;
     private EditText telefoneEditText;
-
+    private String name;
+    private String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,71 +49,77 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         //Log.d(TAG, "calcularPrevisaoVacinacao: " + spinnerLista.getItemAtPosition(1).toString());
 
         String priority;
+        String selection = spinnerLista.getSelectedItem().toString();
 
-        if (spinnerLista.getItemAtPosition(1) == "Idade superior a 80 anos"){
-            priority = "Prioridade 1 - Data para iniciar a Vacinação dia 01/04/2021 à 01/05/2021 ";
+        switch (selection){
+            case "Idade superior a 80 anos":
+                priority = "Prioridade 1, Vacinação dia 01/04/2021 à 01/05/2021";
+                break;
+            case "Índio":
+                priority = "Prioridade 2, Vacinação dia 01/05/2021 à 01/06/2021";
+                break;
+            case "Profissionais Saúde - Atende Covid":
+                priority = "Prioridade 3, Vacinação dia 01/06/2021 à 01/07/2021";
+                break;
+            case "Profissionais da Saúde - Geral":
+                priority = "Prioridade 4, Vacinação dia 01/07/2021 à 01/08/2021";
+                break;
+            case "Idade superior a 70 anos":
+                priority = "Prioridade 5, Vacinação dia 01/08/2021 à 01/09/2021";
+                break;
+            case "Idade superior a 60 anos":
+                priority = "Prioridade 6, Vacinação dia 01/09/2021 à 01/10/2021";
+                break;
+            case "Com Comorbidade Comprovada":
+                priority = "Prioridade 7, Vacinação dia 01/10/2021 à 01/11/2021";
+                break;
+            case "Profissionais Segurança":
+                priority = "Prioridade 8, Vacinação dia 01/11/2021 à 01/12/2021";
+                break;
+            case "Profissionais Área Educação":
+                priority = "Prioridade 9, Vacinação dia 01/12/2021 à 01/01/2022";
+                break;
+            case "Motoristas Transporte Coletivo":
+                priority = "Prioridade 10, Vacinação dia 01/01/2022 à 01/02/2022";
+                break;
+            case "Motoristas Caminhão":
+                priority = "Prioridade 11, Vacinação dia 01/02/2022 à 01/03/2022";
+                break;
+            case "Profissional Atendimento ao Público":
+                priority = "Prioridade 12, Vacinação dia 01/03/2022 à 01/04/2022";
+                break;
+            case "Idade superior a 50 anos":
+                priority = "Prioridade 13, Vacinação dia 01/04/2022 à 01/05/2022";
+                break;
+            case "Grávida":
+                priority = "Prioridade 14, Vacinação dia 01/05/2022 à 01/06/2022";
+                break;
+            case "Idade superior a 40 anos":
+                priority = "Prioridade 15, Vacinação dia 01/06/2022 à 01/07/2022";
+                break;
+            case "Presidiário":
+                priority = "Prioridade 16, Vacinação dia 01/07/2022 à 01/08/2022";
+                break;
+            case "Idade superior a 30 anos":
+                priority = "Prioridade 17, Vacinação dia 01/08/2022 à 01/09/2022";
+                break;
+            case "Idade superior a 25 anos":
+                priority = "Prioridade 18, Vacinação dia 01/09/2022 à 01/10/2022";
+                break;
+            case "Idade superior a 18 anos":
+                priority = "Prioridade 19, Vacinação dia 01/10/2022 à 01/11/2022";
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + selection);
         }
-        else if (spinnerLista.getItemAtPosition(2) == "Índio"){
-            priority = "Prioridade 2 - Data para iniciar a Vacinação dia 01/05/2021 à 01/06/2021 ";
-        }
-        else if (spinnerLista.getItemAtPosition(3) == "Profissionais Saúde - Atende Covid"){
-            priority = "Prioridade 3 - Data para iniciar a Vacinação dia 01/06/2021 à 01/07/2021 ";
-        }
-        else if (spinnerLista.getItemAtPosition(4) == "Profissionais da Saúde - Geral"){
-            priority = "Prioridade 4 - Data para iniciar a Vacinação dia 01/07/2021 à 01/08/2021 ";
-        }
-        else if (spinnerLista.getItemAtPosition(5) == "Idade superior a 70 anos"){
-            priority = "Prioridade 5 - Data para iniciar a Vacinação dia 01/08/2021 à 01/09/2021 ";
-        }
-        else if (spinnerLista.getItemAtPosition(6) == "Idade superior a 60 anos"){
-            priority = "Prioridade 6 - Data para iniciar a Vacinação dia 01/09/2021 à 01/10/2021 ";
-        }
-        else if (spinnerLista.getItemAtPosition(7) == "Com Comorbidade Comprovada"){
-            priority = "Prioridade 7 - Data para iniciar a Vacinação dia 01/10/2021 à 01/11/2021 ";
-        }
-        else if (spinnerLista.getItemAtPosition(8) == "Profissionais Segurança"){
-            priority = "Prioridade 8 - Data para iniciar a Vacinação dia 01/11/2021 à 01/12/2021 ";
-        }
-        else if (spinnerLista.getItemAtPosition(9) == "Profissionais Área Educação"){
-            priority = "Prioridade 9 - Data para iniciar a Vacinação dia 01/12/2021 à 01/01/2022 ";
-        }
-        else if (spinnerLista.getItemAtPosition(10) == "Motoristas Transporte Coletivo"){
-            priority = "Prioridade 10 - Data para iniciar a Vacinação dia 01/01/2022 à 01/02/2022 ";
-        }
-        else if (spinnerLista.getItemAtPosition(11) == "Motoristas Caminhão"){
-            priority = "Prioridade 11 - Data para iniciar a Vacinação dia 01/02/2022 à 01/03/2022 ";
-        }
-        else if (spinnerLista.getItemAtPosition(12) == "Profissional Atendimento ao Público"){
-            priority = "Prioridade 12 - Data para iniciar a Vacinação dia 01/03/2022 à 01/04/2022 ";
-        }
-        else if (spinnerLista.getItemAtPosition(13) == "Idade superior a 50 anos"){
-            priority = "Prioridade 13 - Data para iniciar a Vacinação dia 01/04/2022 à 01/05/2022 ";
-        }
-        else if (spinnerLista.getItemAtPosition(14) == "Grávida"){
-            priority = "Prioridade 14 - Data para iniciar a Vacinação dia 01/05/2022 à 01/06/2022 ";
-        }
-        else if (spinnerLista.getItemAtPosition(15) == "Idade superior a 40 anos"){
-            priority = "Prioridade 15 - Data para iniciar a Vacinação dia 01/06/2022 à 01/07/2022 ";
-        }
-        else if (spinnerLista.getItemAtPosition(16) == "Presidiário"){
-            priority = "Prioridade 16 - Data para iniciar a Vacinação dia 01/07/2022 à 01/08/2022 ";
-        }
-        else if (spinnerLista.getItemAtPosition(17) == "Idade superior a 30 anos"){
-            priority = "Prioridade 17 - Data para iniciar a Vacinação dia 01/08/2022 à 01/09/2022 ";
-        }
-        else if (spinnerLista.getItemAtPosition(18) == "Idade superior a 25 anos"){
-            priority = "Prioridade 18 - Data para iniciar a Vacinação dia 01/09/2022 à 01/10/2022 ";
-        }
-        else if (spinnerLista.getItemAtPosition(19) == "Idade superior a 18 anos"){
-            priority = "Prioridade 19 - Data para iniciar a Vacinação dia 01/10/2022 à 01/11/2022 ";
-        }
-
+        
         Intent intent = new Intent(this, InformationActivity.class);
         intent.putExtra(EXTRA_NAME, name);
         intent.putExtra(EXTRA_EMAIL, email);
         intent.putExtra(EXTRA_PRIORITY, priority);
         startActivity(intent);
     }
+
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String text = parent.getItemAtPosition(position).toString();
